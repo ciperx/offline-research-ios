@@ -1,0 +1,9 @@
+// Retrieval-only configuration: no llama.cpp, no C interop, no native library.
+//
+// Useful for (a) a first run on a fresh clone before the native build, (b) CI on a
+// machine without cmake, (c) verifying that the offline guarantee holds without a
+// model. Both the Swift condition and the C preprocessor definition are set so the
+// bridging header's #include is compiled out too.
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) NO_LLAMA_ENGINE=1
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) NO_LLAMA_ENGINE

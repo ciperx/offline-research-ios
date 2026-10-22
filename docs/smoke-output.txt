@@ -1,0 +1,36 @@
+corpus: 115 articles, 1031 chunks, integrity=ok, schema=3
+  ok    article count > 50
+  ok    chunk count > 200
+  ok    quick_check ok
+
+retrieval:
+  ok    top=TCP congestion control  strategy=or-prefix  candidates=64  367.1ms
+  ok    expected TCP congestion control
+  ok    top=Kalman filter  strategy=or-prefix  candidates=64  218.5ms
+  ok    expected Kalman filter
+  ok    top=Solar cell  strategy=or-prefix  candidates=64  293.0ms
+  ok    expected Solar cell
+  ok    top=Bloom filter  strategy=or-prefix  candidates=64  125.8ms
+  ok    expected Bloom filter
+  ok    top=Delta-v  strategy=or-prefix  candidates=64  124.4ms
+  ok    expected Delta-v
+  ok    top=Write-ahead logging  strategy=or-prefix  candidates=64  75.7ms
+  ok    expected Write-ahead logging
+  6/6 questions retrieved the expected document
+  ok    stopword-only query returns nothing
+
+extractive answer (1047 chars, citations [1, 4]):
+  Extractive answer (no model loaded — passages quoted from the bundled corpus):
+  The polymerase chain reaction (PCR) is a laboratory method widely used to amplify copies of specific DNA sequences rapidly, to enable detailed study. [1] PCR was invented in 1983 by American biochemist Kary Mullis at Cetus Corporation. [1] Mullis and biochemist Michael Smith, who had developed other essential ways of manipulating DNA, were jointly awarded the Nobel Prize in Chemistry in 1993. [1] PCR is fundamental to many of the procedures used in genetic testing, research, including analysis of ancient samples o
+  ok    extractive answer is non-empty
+  ok    extractive answer cites at least one passage
+
+prompt: 2 turns, 6841 chars (~1711 tokens)
+  ok    prompt starts with system turn
+  ok    prompt ends with the question
+  ok    prompt stays under the 4096-token budget
+  ok    retrieval is deterministic
+
+retrieval latency: max 367.1ms over 6 queries
+
+ALL CHECKS PASSED

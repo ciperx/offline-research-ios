@@ -1,0 +1,26 @@
+{
+  "approx_words": 216286,
+  "articles": 115,
+  "built_at": "2026-10-22T02:03:58Z",
+  "bytes": 4333568,
+  "characters": 1297721,
+  "chunking": {
+    "overlap_tokens": 40,
+    "target_tokens": 200
+  },
+  "chunks": 1031,
+  "counts": {
+    "chunks": 1031,
+    "docs": 115,
+    "fts_rows": 1031
+  },
+  "index": "corpus.sqlite",
+  "integrity_check": "ok",
+  "path": "App/Resources/corpus.sqlite",
+  "schema_version": 3,
+  "sha256": "0c832320d1f22dcfefd4aa36f223b25b1a06fdab3363a7c54078476bb7806e9a",
+  "source": {
+    "file": "wiki.jsonl",
+    "sha256": "4890abd67c2df181482e4ae7c6623e0f25d4e9a9e0d2117278738e87f64f0617"
+  }
+}

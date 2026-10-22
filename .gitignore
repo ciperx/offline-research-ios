@@ -1,0 +1,25 @@
+# Build products
+build/
+dist/
+.build/
+DerivedData/
+OfflineResearch.xcodeproj/
+*.xcworkspace
+xcuserdata/
+*.ipa
+*.dSYM
+
+# Native dependency: fetched and built by Scripts/build_llama.sh (pinned)
+vendor/
+
+# Model weights: fetched by Scripts/fetch_model.sh, never committed
+Models/
+*.gguf
+*.gguf.part
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

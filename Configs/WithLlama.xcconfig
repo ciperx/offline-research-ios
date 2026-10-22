@@ -1,0 +1,23 @@
+// Links the static llama.cpp/ggml library built by Scripts/build_llama.sh.
+//
+// Device and simulator archives are built separately (arm64 device, arm64+x86_64
+// simulator) because ggml is compiled with different architecture flags for each, so
+// the search path and the -l flag are per-SDK.
+//
+// If vendor/llama/lib is missing, the link step fails with "library 'lllamaios' not
+// found". Run `make llama`, or generate the retrieval-only project with
+// `make project-nollama` (which uses Configs/NoLlama.xcconfig instead).
+
+LLAMA_ROOT = $(SRCROOT)/vendor/llama
+
+HEADER_SEARCH_PATHS = $(inherited) $(LLAMA_ROOT)/include
+
+LIBRARY_SEARCH_PATHS[sdk=iphoneos*] = $(inherited) $(LLAMA_ROOT)/lib/ios
+LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*] = $(inherited) $(LLAMA_ROOT)/lib/sim
+
+// One assignment per SDK per key: xcconfig values are not additive across lines, a
+// second line for the same key silently replaces the first.
+OTHER_LDFLAGS[sdk=iphoneos*] = $(inherited) -L$(LLAMA_ROOT)/lib/ios -lllamaios -lc++ -lz -framework Accelerate -framework Metal -framework MetalKit -framework Foundation
+OTHER_LDFLAGS[sdk=iphonesimulator*] = $(inherited) -L$(LLAMA_ROOT)/lib/sim -lllamaios -lc++ -lz -framework Accelerate -framework Metal -framework MetalKit -framework Foundation
+
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = i386 armv7

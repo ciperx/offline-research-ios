@@ -1,0 +1,805 @@
+{
+  "summary": {
+    "questions": 53,
+    "scored": 53,
+    "skipped_missing_doc": 0,
+    "hit@1": 0.8491,
+    "hit@3": 0.9245,
+    "mrr": 0.8805,
+    "mean_candidates": 57.4,
+    "elapsed_s": 0.111,
+    "index": "App/Resources/corpus.sqlite"
+  },
+  "results": [
+    {
+      "question": "Why does photosynthesis need light if it only stores energy in sugar?",
+      "expected": "Photosynthesis",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Photosynthesis",
+        "Cellular respiration",
+        "Fermentation"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How do cells make ATP without oxygen?",
+      "expected": "Cellular respiration",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Cellular respiration",
+        "Photosynthesis",
+        "Fermentation"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How are off-target edits reduced in CRISPR gene editing?",
+      "expected": "CRISPR gene editing",
+      "strategy": "or-prefix",
+      "candidates": 59,
+      "top3": [
+        "CRISPR gene editing",
+        "Messenger RNA",
+        "Full-text search"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What does a messenger RNA vaccine actually instruct the cell to build?",
+      "expected": "Messenger RNA",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Messenger RNA",
+        "ARM architecture family",
+        "Solar cell"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does the immune system tell self from non-self?",
+      "expected": "Immune system",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Immune system",
+        "Sleep",
+        "CRISPR gene editing"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What does the gut microbiota do for its host?",
+      "expected": "Gut microbiota",
+      "strategy": "or-prefix",
+      "candidates": 36,
+      "top3": [
+        "Gut microbiota",
+        "Fermentation",
+        "OSI model"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why is sleep timing controlled by light exposure?",
+      "expected": "Circadian rhythm",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Sleep",
+        "Circadian rhythm",
+        "Lidar"
+      ],
+      "rank": 2,
+      "hit@1": false,
+      "hit@3": true,
+      "rr": 0.5
+    },
+    {
+      "question": "How does the brain reorganise itself after injury?",
+      "expected": "Neuroplasticity",
+      "strategy": "or-prefix",
+      "candidates": 27,
+      "top3": [
+        "Neuroplasticity",
+        "Sleep",
+        "Circadian rhythm"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What is the difference between REM and slow wave sleep?",
+      "expected": "Sleep",
+      "strategy": "and-prefix",
+      "candidates": 3,
+      "top3": [
+        "Sleep"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does a positive test not imply a high probability of disease?",
+      "expected": "Bayesian inference",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Bloom filter",
+        "Correlation does not imply causation",
+        "Quantum entanglement"
+      ],
+      "rank": 0,
+      "hit@1": false,
+      "hit@3": false,
+      "rr": 0.0
+    },
+    {
+      "question": "Why do extreme results tend to be followed by average ones?",
+      "expected": "Regression toward the mean",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Regression toward the mean",
+        "Convolutional neural network",
+        "Flash memory"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What is a confounding variable and why does it break causal claims?",
+      "expected": "Confounding",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Confounding",
+        "Correlation does not imply causation",
+        "Electrolysis"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why randomise treatment assignment in a clinical trial?",
+      "expected": "Randomized controlled trial",
+      "strategy": "or-prefix",
+      "candidates": 35,
+      "top3": [
+        "Randomized controlled trial",
+        "CRISPR gene editing",
+        "IPv6"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What does entropy measure in a communication channel?",
+      "expected": "Information theory",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Information theory",
+        "Entropy",
+        "Reed\u2013Solomon error correction"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does a Kalman filter combine a prediction with a noisy measurement?",
+      "expected": "Kalman filter",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Kalman filter",
+        "Inertial navigation system",
+        "Opus (audio format)"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does quantisation lose information?",
+      "expected": "Quantization (signal processing)",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Electrolysis",
+        "Soil salinity",
+        "Ext4"
+      ],
+      "rank": 0,
+      "hit@1": false,
+      "hit@3": false,
+      "rr": 0.0
+    },
+    {
+      "question": "How does retrieval augmented generation reduce hallucination?",
+      "expected": "Retrieval-augmented generation",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Retrieval-augmented generation",
+        "Vector database",
+        "Full-text search"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why is a vector database needed for embedding search?",
+      "expected": "Vector database",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Vector database",
+        "Retrieval-augmented generation",
+        "Full-text search"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does a B-tree keep lookups logarithmic on disk?",
+      "expected": "B-tree",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "B-tree",
+        "Bloom filter",
+        "SQLite"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does a bloom filter have false positives but no false negatives?",
+      "expected": "Bloom filter",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Bloom filter",
+        "Full-text search",
+        "Feedback"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does TCP congestion control react to packet loss?",
+      "expected": "TCP congestion control",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "TCP congestion control",
+        "Network address translation",
+        "Opus (audio format)"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does DNS use UDP for most queries?",
+      "expected": "Domain Name System",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Domain Name System",
+        "Network address translation",
+        "Query optimization"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What problem does network address translation create for peer to peer?",
+      "expected": "Network address translation",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Network address translation",
+        "OSI model",
+        "IPv6"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does Reed-Solomon error correction recover corrupted symbols?",
+      "expected": "Reed\u2013Solomon error correction",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Reed\u2013Solomon error correction",
+        "Ext4",
+        "Kalman filter"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does UTF-8 stay compatible with ASCII?",
+      "expected": "UTF-8",
+      "strategy": "or-prefix",
+      "candidates": 36,
+      "top3": [
+        "UTF-8",
+        "Unicode",
+        "Domain Name System"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does a generational garbage collector decide what to free?",
+      "expected": "Garbage collection (computer science)",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Garbage collection (computer science)",
+        "General relativity",
+        "RISC-V"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why is virtual memory useful when physical RAM is full?",
+      "expected": "Virtual memory",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Memory management unit",
+        "Memory-mapped file",
+        "Virtual memory"
+      ],
+      "rank": 3,
+      "hit@1": false,
+      "hit@3": true,
+      "rr": 0.3333333333333333
+    },
+    {
+      "question": "How does a CPU cache exploit locality?",
+      "expected": "CPU cache",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "CPU cache",
+        "Garbage collection (computer science)",
+        "B-tree"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does a RISC pipeline handle a branch misprediction?",
+      "expected": "RISC-V",
+      "strategy": "or-prefix",
+      "candidates": 59,
+      "top3": [
+        "RISC-V",
+        "Merkle tree",
+        "ARM architecture family"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why do lithium ion cells degrade with fast charging?",
+      "expected": "Lithium-ion battery",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Lithium-ion battery",
+        "Supercapacitor",
+        "Flash memory"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What limits the efficiency of a single junction solar cell?",
+      "expected": "Solar cell",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Solar cell",
+        "Photovoltaic effect",
+        "Polymerase chain reaction"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does nuclear fusion need such high temperature?",
+      "expected": "Nuclear fusion",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Nuclear fusion",
+        "Nuclear fission",
+        "Global Positioning System"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What does the double slit experiment show about measurement?",
+      "expected": "Double-slit experiment",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Double-slit experiment",
+        "Quantum entanglement",
+        "Bloom filter"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does time pass differently at different altitudes?",
+      "expected": "General relativity",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Sleep",
+        "Optical character recognition",
+        "Weather forecasting"
+      ],
+      "rank": 0,
+      "hit@1": false,
+      "hit@3": false,
+      "rr": 0.0
+    },
+    {
+      "question": "How does a gravitational lens magnify a distant galaxy?",
+      "expected": "Gravitational lens",
+      "strategy": "or-prefix",
+      "candidates": 38,
+      "top3": [
+        "Gravitational lens",
+        "General relativity",
+        "Tidal locking"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why is delta-v the real currency of space missions?",
+      "expected": "Delta-v",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Delta-v",
+        "Orbital mechanics",
+        "Virtual memory"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why is weather forecasting probabilistic beyond a few days?",
+      "expected": "Ensemble forecasting",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Weather forecasting",
+        "Ensemble forecasting",
+        "Desalination"
+      ],
+      "rank": 2,
+      "hit@1": false,
+      "hit@3": true,
+      "rr": 0.5
+    },
+    {
+      "question": "How does desalination remove salt from seawater?",
+      "expected": "Desalination",
+      "strategy": "or-prefix",
+      "candidates": 52,
+      "top3": [
+        "Desalination",
+        "Soil salinity",
+        "Sonar"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why do legumes enrich soil with nitrogen?",
+      "expected": "Nitrogen fixation",
+      "strategy": "and-prefix",
+      "candidates": 1,
+      "top3": [
+        "Crop rotation"
+      ],
+      "rank": 0,
+      "hit@1": false,
+      "hit@3": false,
+      "rr": 0.0
+    },
+    {
+      "question": "What makes a sourdough starter rise without commercial yeast?",
+      "expected": "Sourdough",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Sourdough",
+        "Fermentation",
+        "RISC-V"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does mass spectrometry separate ions by mass?",
+      "expected": "Mass spectrometry",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Mass spectrometry",
+        "Supercapacitor",
+        "Lithium-ion battery"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does PCR amplify a specific DNA sequence?",
+      "expected": "Polymerase chain reaction",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Polymerase chain reaction",
+        "Gel electrophoresis",
+        "CRISPR gene editing"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does the Haber process need high pressure?",
+      "expected": "Haber process",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Haber process",
+        "Shock wave",
+        "Blockchain"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does a catalyst speed a reaction without being consumed?",
+      "expected": "Catalysis",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Catalysis",
+        "Chemical equilibrium",
+        "Haber process"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What is the difference between lidar and radar?",
+      "expected": "Lidar",
+      "strategy": "and-prefix",
+      "candidates": 7,
+      "top3": [
+        "Lidar",
+        "Radar"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does an inertial navigation system drift over time?",
+      "expected": "Inertial navigation system",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Inertial navigation system",
+        "Global Positioning System",
+        "General relativity"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does GPS need four satellites rather than three?",
+      "expected": "Global Positioning System",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Global Positioning System",
+        "UTF-8",
+        "Inertial navigation system"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does negative feedback stabilise a control loop?",
+      "expected": "Control theory",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Feedback",
+        "Recurrent neural network",
+        "Control theory"
+      ],
+      "rank": 3,
+      "hit@1": false,
+      "hit@3": true,
+      "rr": 0.3333333333333333
+    },
+    {
+      "question": "How does a convolutional network exploit translation invariance?",
+      "expected": "Convolutional neural network",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Convolutional neural network",
+        "Network address translation",
+        "Recurrent neural network"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "Why does reinforcement learning need exploration?",
+      "expected": "Reinforcement learning",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Reinforcement learning",
+        "Escape velocity",
+        "Inertial navigation system"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does a Monte Carlo estimate converge with sample count?",
+      "expected": "Monte Carlo method",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Monte Carlo method",
+        "Ensemble forecasting",
+        "Markov chain"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "What does the ACID acronym guarantee for a transaction?",
+      "expected": "ACID",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "ACID",
+        "SQLite",
+        "Garbage collection (computer science)"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    },
+    {
+      "question": "How does write ahead logging make a database crash safe?",
+      "expected": "Write-ahead logging",
+      "strategy": "or-prefix",
+      "candidates": 64,
+      "top3": [
+        "Write-ahead logging",
+        "ACID",
+        "SQLite"
+      ],
+      "rank": 1,
+      "hit@1": true,
+      "hit@3": true,
+      "rr": 1.0
+    }
+  ]
+}

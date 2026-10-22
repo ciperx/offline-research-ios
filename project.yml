@@ -1,0 +1,121 @@
+name: OfflineResearch
+
+options:
+  bundleIdPrefix: com.ciperx
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  defaultConfig: Debug
+  xcodeVersion: "15.0"
+
+configs:
+  Debug: debug
+  Release: release
+  Debug-NoLlama: debug
+  Release-NoLlama: release
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    ENABLE_BITCODE: NO
+    CLANG_CXX_LANGUAGE_STANDARD: "c++17"
+    CLANG_CXX_LIBRARY: "libc++"
+    CLANG_ENABLE_OBJC_ARC: YES
+    SWIFT_STRICT_CONCURRENCY: minimal
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    DEAD_CODE_STRIPPING: YES
+    GCC_OPTIMIZATION_LEVEL: s
+    SWIFT_OPTIMIZATION_LEVEL: "-O"
+  configs:
+    Debug:
+      SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    Release:
+      SWIFT_COMPILATION_MODE: wholemodule
+    Debug-NoLlama:
+      SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+    Release-NoLlama:
+      SWIFT_COMPILATION_MODE: wholemodule
+
+targets:
+  OfflineResearch:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/Sources
+      - path: App/Resources
+        excludes:
+          - "*.md"
+      - path: App/Bridging
+        buildPhase: none
+        type: file
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ciperx.offlineresearch
+        PRODUCT_NAME: OfflineResearch
+        INFOPLIST_FILE: App/Info.plist
+        SWIFT_OBJC_BRIDGING_HEADER: App/Bridging/OfflineResearch-Bridging-Header.h
+        HEADER_SEARCH_PATHS:
+          - "$(SRCROOT)/vendor/llama/include"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/Frameworks"
+    configFiles:
+      Debug: Configs/WithLlama.xcconfig
+      Release: Configs/WithLlama.xcconfig
+      Debug-NoLlama: Configs/NoLlama.xcconfig
+      Release-NoLlama: Configs/NoLlama.xcconfig
+
+  OfflineResearchTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: OfflineResearch
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ciperx.offlineresearch.tests
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/OfflineResearch.app/OfflineResearch"
+    configFiles:
+      Debug: Configs/NoLlama.xcconfig
+      Release: Configs/NoLlama.xcconfig
+      Debug-NoLlama: Configs/NoLlama.xcconfig
+      Release-NoLlama: Configs/NoLlama.xcconfig
+
+schemes:
+  OfflineResearch:
+    build:
+      targets:
+        OfflineResearch: all
+        OfflineResearchTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: false
+      targets:
+        - name: OfflineResearchTests
+          parallelizable: false
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+
+  OfflineResearch-NoLlama:
+    build:
+      targets:
+        OfflineResearch: all
+    run:
+      config: Debug-NoLlama
+    archive:
+      config: Release-NoLlama
